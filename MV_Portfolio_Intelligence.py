@@ -102,8 +102,8 @@ class ExecutivePDF(FPDF):
         self.ln(5)
 
 # --- INTERFACE ---
-st.set_page_config(page_title="MV Portfolio Intelligence", layout="wide")
-st.title("🛰️ MV Portfolio Intelligence: Auditoria & Benchmarking de Programs & Projetos")
+st.set_page_config(page_title="Portfolio Intelligence", layout="wide")
+st.title("🛰️ Portfolio Intelligence: Auditoria & Benchmarking de Programas & Projetos")
 
 with st.sidebar:
     st.header("📂 Governança de Dados")
@@ -154,7 +154,7 @@ if uploaded_files:
 
     if st.button("🚀 Gerar Relatório Master para Diretoria"):
         pdf = ExecutivePDF()
-        pdf.header_report("RELATÓRIO CONSOLIDADO DE GOVERNANÇA MV")
+        pdf.header_report("RELATÓRIO CONSOLIDADO DE GOVERNANÇA")
         
         # 1. Sumário do Portfólio
         pdf.set_fill_color(230, 230, 230); pdf.set_font("Helvetica", "B", 11)
@@ -216,4 +216,4 @@ if uploaded_files:
         pdf.set_x(20); pdf.cell(70, 7, "Diretor de PMO / Auditor", align='C')
         pdf.set_x(120); pdf.cell(70, 7, "Diretor de Operações", align='C')
 
-        st.download_button("📥 Baixar Relatório Master Consolidado", bytes(pdf.output()), "AUDITORIA_MASTER_MV.pdf")
+        st.download_button("📥 Baixar Relatório Master Consolidado", bytes(pdf.output()), "AUDITORIA_MASTER.pdf")
