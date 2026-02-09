@@ -193,6 +193,7 @@ if uploaded_files:
         pdf.set_y(250); pdf.line(20, 260, 90, 260); pdf.line(120, 260, 190, 260)
         pdf.set_font("Helvetica", "B", 10); pdf.set_y(261)
         pdf.set_x(20); pdf.cell(70, 7, "Diretoria de Operações", align='C')
-        pdf.set_x(120); pdf.cell(70, 7, "Diretor de PMO / Auditor", align='C')
+        pdf.set_x(120); pdf.cell(70, 7, "Auditor PMO Programas", align='C')
 
         st.download_button("📥 Baixar RELATORIO_MV_DIRETORIA.pdf", bytes(pdf.output()), "RELATORIO_MV_DIRETORIA.pdf")
+
